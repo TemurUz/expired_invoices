@@ -16,7 +16,7 @@ import temur.uz.product.service.order.OrderService;
 public class OrderController {
     private final OrderService orderService;
 
-    @PostMapping
+    @PostMapping("/save")
     public ResponseEntity<ApiResponse> save(@RequestBody OrderDto orderDto){
         ApiResponse apiResponse = orderService.saveOrder(orderDto);
         if (!apiResponse.isSuccess())
